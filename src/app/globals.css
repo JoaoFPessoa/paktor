@@ -3,11 +3,22 @@
 @tailwind utilities;
 
 body {
-
+	background: linear-gradient(to bottom, #cfd8dc, #ffffff);
+	font-family: 'Public Sans', sans-serif;
+	width: 100vw;
+	height: 100vh;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.text-balance {
+		text-wrap: balance;
+	}
+}
+
+@font-face {
+	font-family: Public Sans;
+	src: url('/fonts/PublicSans-Regular.woff2') format('woff2'),
+		url('/fonts/PublicSans-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
