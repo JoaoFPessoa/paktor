@@ -1,5 +1,5 @@
-import Button from './button';
-import QuoteButton from './quoteButton';
+import Button from '../../button';
+import QuoteButton from '../../quoteButton';
 
 export default function Navbar() {
 	return (

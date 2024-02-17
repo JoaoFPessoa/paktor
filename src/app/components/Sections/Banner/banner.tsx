@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import City from '../../../public/city.jpg';
 import Image from 'next/image';
-import QuoteButton from './quoteButton';
+import QuoteButton from '../../quoteButton';
 
 export default function Banner() {
 	const [offsetY, setOffsetY] = useState(0);

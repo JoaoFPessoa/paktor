@@ -1,4 +1,4 @@
-import Header from './components/header';
+import Header from './components/Sections/Header/header';
 import ClientPage from './ClientPage';
 
 export default function Home() {

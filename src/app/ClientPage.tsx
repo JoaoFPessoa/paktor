@@ -1,6 +1,6 @@
 'use client';
 
-import Banner from './components/banner';
+import Banner from './components/Sections/Banner/banner';
 
 export default function ClientPage() {
 	return (
