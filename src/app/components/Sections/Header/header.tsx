@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Logo from '../../../public/logo-verde-branco.png';
+import Logo from '../../../../../public/logo-verde-branco.png';
 import Navbar from './navbar';
 export default function Header() {
 	return (

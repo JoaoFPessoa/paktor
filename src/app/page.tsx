@@ -1,5 +1,5 @@
 import Header from './components/Sections/Header/header';
-import ClientPage from './ClientPage';
+import ClientPage from './pageClientsSide';
 
 export default function Home() {
 	return (
