@@ -1,26 +1,19 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import ImageOne from '../../../../public/services-image-1.png';
-import ImageTwo from '../../../../public/services-image-2.png';
-import ImageThree from '../../../../public/services-image-3.png';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 interface ImageCarouselProps {
 	deviceType?: string;
+	images: {
+		src: StaticImageData;
+		swappedImage?: StaticImageData;
+		alt: string;
+		title?: string;
+		description?: string;
+	}[];
+	autoPlay?: boolean;
 }
-
-const images = [
-	{ src: ImageOne, swappedImage: ImageTwo, alt: '' },
-	{ src: ImageThree, swappedImage: ImageTwo, alt: '' },
-	{ src: ImageOne, swappedImage: ImageTwo, alt: '' },
-	{ src: ImageThree, swappedImage: ImageTwo, alt: '' },
-	{ src: ImageOne, swappedImage: ImageTwo, alt: '' },
-	{ src: ImageThree, swappedImage: ImageTwo, alt: '' },
-	{ src: ImageOne, swappedImage: ImageTwo, alt: '' },
-	{ src: ImageThree, swappedImage: ImageTwo, alt: '' },
-	{ src: ImageOne, swappedImage: ImageTwo, alt: '' },
-];
 
 const responsive = {
 	largeDesktop: {
@@ -47,8 +40,9 @@ class ImageCarousel extends React.Component<ImageCarouselProps> {
 	};
 
 	render() {
-		const { deviceType } = this.props;
+		const { deviceType, images, autoPlay } = this.props;
 		const { hoveredIndex } = this.state;
+
 		return (
 			<Carousel
 				swipeable={false}
@@ -57,7 +51,7 @@ class ImageCarousel extends React.Component<ImageCarouselProps> {
 				responsive={responsive}
 				ssr={true}
 				infinite={true}
-				autoPlay={deviceType !== 'mobile'}
+				autoPlay={autoPlay}
 				autoPlaySpeed={2500}
 				customTransition="transform 500ms ease-in-out"
 				centerMode
@@ -77,9 +71,19 @@ class ImageCarousel extends React.Component<ImageCarouselProps> {
 					>
 						<Image
 							className="grayscale-0 hover:grayscale transform hover:scale-105 transition duration-300"
-							src={hoveredIndex === index ? image.swappedImage : image.src}
+							src={
+								hoveredIndex === index && image.swappedImage
+									? image.swappedImage
+									: image.src
+							}
 							alt={image.alt}
 						/>
+						{image.title && (
+							<div className="mt-2 w-[80%]">
+								<h1 className="font-semibold text-xl">{image.title}</h1>
+								<h2 className="text-gray-700 text-sm">{image.description}</h2>
+							</div>
+						)}
 					</div>
 				))}
 			</Carousel>
