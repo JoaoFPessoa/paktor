@@ -1,9 +1,13 @@
+import Header from './components/header';
+import ClientPage from './ClientPage';
+
 export default function Home() {
-  return (
-    <div>
-      <header>
-        <h1>olá mundo</h1>
-      </header>
-    </div>
-  );
+	return (
+		<div>
+			<Header />
+			<div className="h-[4000px] py-5 px-[5%]">
+				<ClientPage />
+			</div>
+		</div>
+	);
 }
