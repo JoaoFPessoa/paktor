@@ -16,6 +16,7 @@ const config: Config = {
 			},
 			colors: {
 				buttonGreen: '#38E078',
+				grayBackground: '#EDEADE',
 			},
 		},
 	},

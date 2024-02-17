@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 body {
-	background: linear-gradient(to bottom, #cfd8dc, #ffffff);
+	background: #edeade;
 	font-family: 'Public Sans', sans-serif;
 	width: 100vw;
 	height: 100vh;
+	overflow-x: hidden;
 }
 
 @layer utilities {
