@@ -2,12 +2,16 @@ import React from 'react';
 
 interface ButtonProps {
 	children: React.ReactNode; // Or React.ElementType if you expect a specific type of children
+	href: string;
 }
 
-export default function Button({ children }: ButtonProps) {
+export default function Button({ children, href }: ButtonProps) {
 	return (
-		<button className="transform hover:scale-105 transition duration-300">
+		<a
+			href={href}
+			className="transform hover:scale-105 transition duration-300"
+		>
 			{children}
-		</button>
+		</a>
 	);
 }

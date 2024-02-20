@@ -1,6 +1,6 @@
 export default function ServicesSection() {
 	return (
-		<div className="pt-10">
+		<div className="pt-10" id="services">
 			<h1 className="leading-45 font-extrabold tracking-tight text-4xl">
 				Nossos serviços
 			</h1>
