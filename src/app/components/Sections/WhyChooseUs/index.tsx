@@ -8,8 +8,11 @@ export default function WhyChooseUsSection() {
 			</h1>
 			<div className="flex w-full mt-10 border gap-4">
 				<Card title={'Experiência'} description="20+ anos" />
-				<Card title={'Qualidade'} description="20+ anos" />
-				<Card title={'Serviço'} description="20+ anos" />
+				<Card title={'Qualidade'} description="5 estrelas pelos clientes" />
+				<Card
+					title={'Serviço'}
+					description="Contato direto com proprietários"
+				/>
 			</div>
 		</div>
 	);
