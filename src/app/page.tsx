@@ -8,6 +8,7 @@ import ServicesSection from './components/Sections/Services';
 import ImageOne from '../../public/services-image-1.png';
 import ImageTwo from '../../public/services-image-2.png';
 import ImageThree from '../../public/services-image-3.png';
+import Contact from './components/Sections/Contact';
 
 const projectsImages = [
 	{
@@ -106,6 +107,7 @@ export default function Home() {
 				<CarouselClientPage images={projectsImages} autoPlay={true} />
 				<WhyChooseUsSection />
 				<Testimonials />
+				<Contact />
 			</div>
 		</div>
 	);
