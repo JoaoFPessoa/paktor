@@ -97,7 +97,7 @@ export default function Home() {
 	return (
 		<div>
 			<Header />
-			<div className="px-[10%] gap-10 flex flex-col py-5" id="body">
+			<div className="px-[5%] md:px-[10%] gap-10 flex flex-col py-5" id="body">
 				<div>
 					<BannerClientPage />
 				</div>
