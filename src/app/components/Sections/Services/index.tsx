@@ -1,10 +1,10 @@
 export default function ServicesSection() {
 	return (
-		<div className="pt-10" id="services">
-			<h1 className="leading-45 font-extrabold tracking-tight text-4xl">
+		<div className="pt-4 md:pt-10" id="services">
+			<h1 className="leading-45 text-xl font-extrabold tracking-tight md:text-4xl">
 				Nossos serviços
 			</h1>
-			<h2 className=" text-gray-800 w-[60%] py-3">
+			<h2 className=" text-gray-800 text-sm md:text-base md:w-[60%] py-3">
 				Executando reformas em <b>casas, apartamentos e salas comerciais</b>,
 				bem como construindo empreendimentos desde a fundação até o acabamento
 				final, possuindo um forte viés sustentável -{' '}
