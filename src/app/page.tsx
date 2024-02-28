@@ -9,6 +9,12 @@ import ImageOne from '../../public/services-image-1.png';
 import ImageTwo from '../../public/services-image-2.png';
 import ImageThree from '../../public/services-image-3.png';
 import Contact from './components/Sections/Contact';
+import { Public_Sans, Inter } from '@next/font/google';
+
+const public_sans = Public_Sans({
+	subsets: ['latin'],
+	weight: ['400', '700'],
+});
 
 const projectsImages = [
 	{
@@ -95,20 +101,25 @@ const servicesImages = [
 
 export default function Home() {
 	return (
-		<div>
-			<Header />
-			<div className="px-[5%] md:px-[10%] gap-10 flex flex-col py-5" id="body">
-				<div>
-					<BannerClientPage />
+		<main className={public_sans.className}>
+			<div>
+				<Header />
+				<div
+					className="px-[5%] md:px-[10%] gap-10 flex flex-col py-5"
+					id="body"
+				>
+					<div>
+						<BannerClientPage />
+					</div>
+					<ServicesSection />
+					<CarouselClientPage images={servicesImages} autoPlay={false} />
+					<Projects />
+					<CarouselClientPage images={projectsImages} autoPlay={true} />
+					<WhyChooseUsSection />
+					<Testimonials />
+					<Contact />
 				</div>
-				<ServicesSection />
-				<CarouselClientPage images={servicesImages} autoPlay={false} />
-				<Projects />
-				<CarouselClientPage images={projectsImages} autoPlay={true} />
-				<WhyChooseUsSection />
-				<Testimonials />
-				<Contact />
 			</div>
-		</div>
+		</main>
 	);
 }
