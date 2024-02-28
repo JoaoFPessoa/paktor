@@ -23,7 +23,7 @@ const responsive = {
 	},
 	desktop: { breakpoint: { max: 2000, min: 1024 }, items: 3, slidesToSlide: 1 },
 	tablet: { breakpoint: { max: 1024, min: 464 }, items: 2, slidesToSlide: 1 },
-	mobile: { breakpoint: { max: 464, min: 0 }, items: 1, slidesToSlide: 1 },
+	mobile: { breakpoint: { max: 463, min: 0 }, items: 0.6, slidesToSlide: 1 },
 };
 
 class ImageCarousel extends React.Component<ImageCarouselProps> {
@@ -57,7 +57,6 @@ class ImageCarousel extends React.Component<ImageCarouselProps> {
 				centerMode
 				transitionDuration={200}
 				containerClass="carousel-container"
-				removeArrowOnDeviceType={['tablet', 'mobile']}
 				deviceType={deviceType}
 				itemClass="carousel-item-padding-20-px"
 				pauseOnHover={true}
@@ -80,7 +79,7 @@ class ImageCarousel extends React.Component<ImageCarouselProps> {
 						/>
 						{image.title && (
 							<div className="mt-2 w-[80%]">
-								<h1 className="font-semibold text-xl">{image.title}</h1>
+								<h1 className="font-semibold md:text-xl">{image.title}</h1>
 								<h2 className="text-gray-700 text-sm">{image.description}</h2>
 							</div>
 						)}
