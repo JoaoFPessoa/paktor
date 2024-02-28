@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import Logo from '../../../../../public/logo-verde-branco.png';
 import Navbar from './navbar';
