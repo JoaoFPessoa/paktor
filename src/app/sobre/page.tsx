@@ -59,7 +59,7 @@ const AboutPage = () => {
 					</div>
 				</div>
 
-				<div className="w-full grid md:grid-cols-3 gap-6 mt-12">
+				<div className="w-full  grid md:grid-cols-3 gap-6 mt-24">
 					<Card>
 						<CardContent className="pt-6">
 							<div className="text-2xl md:text-4xl font-bold">Missão</div>
