@@ -44,7 +44,7 @@ export default function TestimonialCard({
 			<div id="rating" className="m-1 mt-3 flex">
 				{starElements}
 			</div>
-			<div id="description" className="text-base md:text-xl mt-3">
+			<div id="description" className="w-1/3 mt-3">
 				{description}
 			</div>
 		</div>
