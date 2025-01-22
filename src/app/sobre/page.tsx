@@ -1,22 +1,24 @@
-'use client';
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import Header from '../components/Sections/Header/header';
+import Card, { CardContent } from '../components/Cards';
 import Image from 'next/image';
+import Header from '../components/Sections/Header/header';
 
 const AboutPage = () => {
 	return (
-		<div className="w-full">
+		<>
 			<Header />
 
-			{/* Top Container */}
-			<div className="mt-12 max-w-[120rem] mx-auto px-4 flex flex-wrap justify-between items-center">
-				{/* Text Section */}
-				<div className="w-full lg:w-1/2 flex flex-col items-end ">
-					<div>
-						<h2 className="text-3xl font-bold mb-8 text-gray-800">
-							Nossa História
-						</h2>
-						<div className="space-y-6 text-2xl font-medium max-w-[850px] text-gray-600 leading-relaxed">
+			<div className="px-[10%] mx-auto p-8">
+				<div className="  grid md:grid-cols-2 gap-12 items-center ">
+					<div className="space-y-6">
+						<div className="text-orange-500 font-medium">Nossa história</div>
+
+						<h1 className="text-3xl md:text-5xl font-bold leading-tight">
+							Referência no mercado da construção civil.
+						</h1>
+
+						<p className="text-sm md:text-base flex flex-col gap-2 text-gray-600 leading-relaxed">
 							<p>
 								A Paktor Engenharia é uma empresa localizada em Barueri-SP,
 								especializada no setor da construção civil, com atuação em
@@ -41,71 +43,67 @@ const AboutPage = () => {
 								relacionamentos duradouros e parcerias de longo prazo com
 								clientes e fornecedores.
 							</p>
-						</div>
-					</div>
-				</div>
-
-				{/* Image Section */}
-				<div className="w-full lg:w-1/2 flex justify-center">
-					<Image
-						alt="Sócios Fernando e Gabriel"
-						width={650}
-						height={650}
-						objectFit="cover"
-						src={'/sobre/socios.jpg'}
-					/>
-				</div>
-			</div>
-
-			{/* Main Content */}
-			<div className="max-w-[120rem] mx-auto px-4 py-16">
-				{/* Mission, Vision, and Values */}
-				<div className="grid md:grid-cols-3 gap-8">
-					{/* Mission */}
-					<div className="bg-white rounded-lg p-8 shadow-lg">
-						<h3 className="text-3xl font-bold mb-4 text-gray-800">Missão</h3>
-						<p className="text-xl gray-600">
-							Trabalhar utilizando técnicas específicas para cada tipo de obra,
-							adequando as soluções para a necessidade de cada cliente, com o
-							objetivo de construir relações transparentes, prestando serviços
-							de qualidade e garantindo a satisfação do parceiro.
 						</p>
 					</div>
 
-					{/* Vision */}
-					<div className="bg-white rounded-lg p-8 shadow-lg">
-						<h3 className="text-3xl font-bold mb-4 text-gray-800">Visão</h3>
-						<p className="text-gray-600 text-xl">
-							Ser referência no mercado da construção civil, utilizando técnicas
-							inovadoras de forma sustentável, minimizando desperdícios e prazo.
-						</p>
-					</div>
-
-					{/* Values */}
-					<div className="bg-white rounded-lg p-8 shadow-lg">
-						<h3 className="text-3xl font-bold mb-4 text-gray-800">Valores</h3>
-						<ul className="space-y-2 text-gray-600 text-xl">
-							<li className="flex items-center gap-2">
-								<div className="w-2 h-2 bg-green-500 rounded-full"></div>
-								Integridade
-							</li>
-							<li className="flex items-center gap-2">
-								<div className="w-2 h-2 bg-green-500 rounded-full"></div>
-								Ética e transparência
-							</li>
-							<li className="flex items-center gap-2">
-								<div className="w-2 h-2 bg-green-500 rounded-full"></div>
-								Comprometimento e Responsabilidade
-							</li>
-							<li className="flex items-center gap-2">
-								<div className="w-2 h-2 bg-green-500 rounded-full"></div>
-								Atitude e Liderança
-							</li>
-						</ul>
+					<div>
+						<Image
+							src={'/sobre/socios.jpg'}
+							alt="Two people looking at laptop"
+							height={400}
+							width={600}
+							className="rounded-lg object-cover"
+							sizes="(max-width: 768px) 100vw, 600px"
+						/>
 					</div>
 				</div>
+
+				<div className="w-full grid md:grid-cols-3 gap-6 mt-12">
+					<Card>
+						<CardContent className="pt-6">
+							<div className="text-2xl md:text-4xl font-bold">Missão</div>
+							<div className="text-gray-600 mt-2 tracking-wide">
+								Trabalhar utilizando técnicas específicas para cada tipo de
+								obra, adequando as soluções para a necessidade de cada cliente,
+								com o objetivo de construir relações transparentes, prestando
+								serviços de qualidade e garantindo a satisfação do parceiro.
+							</div>
+						</CardContent>
+					</Card>
+
+					<Card>
+						<CardContent className="pt-6">
+							<div className="text-2xl md:text-4xl  font-bold">Visão</div>
+							<div className="text-gray-600 mt-2">
+								Ser referência no mercado da construção civil, utilizando
+								técnicas inovadoras de forma sustentável, minimizando
+								desperdícios e prazo.
+							</div>
+						</CardContent>
+					</Card>
+
+					<Card>
+						<CardContent className="pt-6">
+							<div className="text-2xl md:text-4xl  font-bold">Valores</div>
+							<div className="text-gray-600 mt-2">
+								<ul className="space-y-2 ">
+									<li className="flex items-center gap-2">Integridade</li>
+									<li className="flex items-center gap-2">
+										Ética e transparência
+									</li>
+									<li className="flex items-center gap-2">
+										Comprometimento e Responsabilidade
+									</li>
+									<li className="flex items-center gap-2">
+										Atitude e Liderança
+									</li>
+								</ul>
+							</div>
+						</CardContent>
+					</Card>
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
