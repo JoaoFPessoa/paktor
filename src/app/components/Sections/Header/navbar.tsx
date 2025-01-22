@@ -11,7 +11,7 @@ export default function Navbar() {
 
 	function MobileMenu() {
 		return (
-			<div className="md:hidden relative">
+			<div className="md:hidden  absolute left-2">
 				{/* Burger Icon */}
 				<div className="block">
 					<button
@@ -39,15 +39,17 @@ export default function Navbar() {
 				<div
 					className={`${
 						showMenu ? 'absolute block' : 'hidden'
-					} md:hidden bg-white w-[180px] mt-2 rounded-md shadow-lg`}
+					} md:hidden bg-white w-[220px] mt-2 rounded-md shadow-lg`}
 				>
 					<div
 						onClick={toggleMenu}
-						className=" flex flex-col text-center gap-4  p-3"
+						className=" flex flex-col text-center p-2 gap-1 "
 					>
+						<Button href="/">Início</Button>
+						<Button href="/sobre">Sobre</Button>
 						<Button href="#services">Serviços</Button>
 						<Button href="#projects">Projetos</Button>
-						<Button href="#contact">Contatos</Button>
+						<Button href="/contato">Contatos</Button>
 						<QuoteButton />
 					</div>
 				</div>
@@ -57,11 +59,12 @@ export default function Navbar() {
 
 	const DesktopMenu = () => {
 		return (
-			<div className="md:flex hidden gap-3 justify-between md:px-5 items-center font-semibold">
-				<Button href="#about">Sobre</Button>
+			<div className="md:flex hidden gap-4 justify-between md:px-5 items-center font-semibold">
+				<Button href="/">Início</Button>
+				<Button href="/sobre">Sobre</Button>
 				<Button href="#services">Serviços</Button>
 				<Button href="#projects">Projetos</Button>
-				<Button href="#contact">Contatos</Button>
+				<Button href="/contato">Contatos</Button>
 				<QuoteButton />
 			</div>
 		);

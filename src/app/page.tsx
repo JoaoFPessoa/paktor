@@ -9,9 +9,9 @@ import ImageOne from '../../public/services-image-1.png';
 import ImageTwo from '../../public/services-image-2.png';
 import ImageThree from '../../public/services-image-3.png';
 import Contact from './components/Sections/Contact';
-import { Public_Sans, Inter } from '@next/font/google';
+import { Montserrat } from '@next/font/google';
 
-const public_sans = Public_Sans({
+const montserrat = Montserrat({
 	subsets: ['latin'],
 	weight: ['400', '700'],
 });
@@ -101,13 +101,10 @@ const servicesImages = [
 
 export default function Home() {
 	return (
-		<main className={public_sans.className}>
+		<main className={montserrat.className}>
 			<div>
 				<Header />
-				<div
-					className="px-[5%] md:px-[10%] gap-10 flex flex-col py-5"
-					id="body"
-				>
+				<div className="px-[5%] md:px-[10%] gap-10 flex flex-col" id="body">
 					<div>
 						<BannerClientPage />
 					</div>

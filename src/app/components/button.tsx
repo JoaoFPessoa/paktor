@@ -9,7 +9,7 @@ export default function Button({ children, href }: ButtonProps) {
 	return (
 		<a
 			href={href}
-			className="transform text-sm md:text-base hover:scale-105 transition duration-300"
+			className="transform md:text-lg p-1 border rounded-md lg:border-0 hover:scale-105 transition duration-300"
 		>
 			{children}
 		</a>

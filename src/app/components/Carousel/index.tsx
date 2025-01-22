@@ -58,7 +58,7 @@ class ImageCarousel extends React.Component<ImageCarouselProps> {
 				transitionDuration={200}
 				containerClass="carousel-container"
 				deviceType={deviceType}
-				itemClass="carousel-item-padding-20-px"
+				itemClass="carousel-item-padding-20-px "
 				pauseOnHover={true}
 				focusOnSelect
 			>
@@ -76,11 +76,13 @@ class ImageCarousel extends React.Component<ImageCarouselProps> {
 									: image.src
 							}
 							alt={image.alt}
+							height={480}
+							width={480}
 						/>
 						{image.title && (
 							<div className="mt-2 w-[80%]">
 								<h1 className="font-semibold md:text-xl">{image.title}</h1>
-								<h2 className="text-gray-700 text-sm">{image.description}</h2>
+								<h2 className="text-gray-700 text-xl">{image.description}</h2>
 							</div>
 						)}
 					</div>
