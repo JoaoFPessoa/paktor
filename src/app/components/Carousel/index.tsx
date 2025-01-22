@@ -16,14 +16,27 @@ interface ImageCarouselProps {
 }
 
 const responsive = {
-	largeDesktop: {
-		breakpoint: { max: 4000, min: 2000 },
-		items: 4,
+	desktop: {
+		breakpoint: {
+			max: 3000,
+			min: 1024,
+		},
+		items: 3,
 		slidesToSlide: 1,
+		partialVisibilityGutter: 40,
 	},
-	desktop: { breakpoint: { max: 2000, min: 1024 }, items: 3, slidesToSlide: 1 },
-	tablet: { breakpoint: { max: 1024, min: 464 }, items: 2, slidesToSlide: 1 },
-	mobile: { breakpoint: { max: 463, min: 0 }, items: 0.6, slidesToSlide: 1 },
+	tablet: {
+		breakpoint: { max: 1024, min: 464 },
+		items: 2,
+		slidesToSlide: 1,
+		partialVisibilityGutter: 30,
+	},
+	mobile: {
+		breakpoint: { max: 463, min: 0 },
+		items: 1,
+		slidesToSlide: 1,
+		partialVisibilityGutter: 30,
+	},
 };
 
 class ImageCarousel extends React.Component<ImageCarouselProps> {
@@ -45,8 +58,8 @@ class ImageCarousel extends React.Component<ImageCarouselProps> {
 
 		return (
 			<Carousel
-				swipeable={false}
-				draggable={false}
+				swipeable={deviceType === 'mobile' ? true : false}
+				draggable={deviceType === 'mobile' ? true : false}
 				showDots={false}
 				responsive={responsive}
 				ssr={true}
@@ -57,8 +70,8 @@ class ImageCarousel extends React.Component<ImageCarouselProps> {
 				centerMode
 				transitionDuration={200}
 				containerClass="carousel-container"
+				itemClass="carousel-item" // Add a class for each item
 				deviceType={deviceType}
-				itemClass="carousel-item-padding-20-px "
 				pauseOnHover={true}
 				focusOnSelect
 			>
@@ -76,13 +89,20 @@ class ImageCarousel extends React.Component<ImageCarouselProps> {
 									: image.src
 							}
 							alt={image.alt}
-							height={480}
-							width={480}
+							height={500}
+							width={333}
+							sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" // Responsive sizes
+							style={{
+								width: '100%', // Make the image responsive
+								height: 'auto', // Maintain aspect ratio
+							}}
+							priority={index < 3} // Prioritize the first 3 images
+							loading={index >= 3 ? 'lazy' : 'eager'} // Lazy-load the rest
 						/>
 						{image.title && (
 							<div className="mt-2 w-[80%]">
-								<h1 className="font-semibold md:text-xl">{image.title}</h1>
-								<h2 className="text-gray-700 text-xl">{image.description}</h2>
+								<h1 className="font-semibold md:text-md">{image.title}</h1>
+								<h2 className="text-gray-700 text-sm">{image.description}</h2>
 							</div>
 						)}
 					</div>
