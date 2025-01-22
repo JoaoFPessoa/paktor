@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import Footer from './components/Sections/Footer';
 
 export const metadata: Metadata = {
 	title: 'Paktor - Engenharia e construção',
@@ -13,7 +14,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html>
-			<body>{children}</body>
+			<body>
+				<>
+					{children}
+					<Footer />
+				</>
+			</body>
 		</html>
 	);
 }

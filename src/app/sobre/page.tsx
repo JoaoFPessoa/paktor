@@ -3,13 +3,14 @@ import React from 'react';
 import Card, { CardContent } from '../components/Cards';
 import Image from 'next/image';
 import Header from '../components/Sections/Header/header';
+import Footer from '../components/Sections/Footer';
 
 const AboutPage = () => {
 	return (
 		<>
 			<Header />
 
-			<div className="px-[10%] mx-auto p-8">
+			<div className=" px-[10%] mx-auto p-8">
 				<div className="  grid md:grid-cols-2 gap-12 items-center ">
 					<div className="space-y-6">
 						<div className="text-orange-500 font-medium">Nossa história</div>
@@ -19,22 +20,22 @@ const AboutPage = () => {
 						</h1>
 
 						<p className="text-sm md:text-base flex flex-col gap-2 text-gray-600 leading-relaxed">
-							<p>
+							<span>
 								A Paktor Engenharia é uma empresa localizada em Barueri-SP,
 								especializada no setor da construção civil, com atuação em
 								diversos segmentos, como construção de residências, reforma
 								residenciais e comerciais, projetos arquitetonicos, entre
 								outros.
-							</p>
-							<p>
+							</span>
+							<span>
 								Fundada em 2021, por meio da parceria entre os dois engenheiros,
 								Fernando Padilha e Gabriel Modena, a Paktor foi criada com a
 								missão de atender de forma eficiente às demandas do mercado,
 								utilizando soluções personalizadas, executando obras com a
 								qualidade rigorosa exigida pelos clientes e sempre cumprindo os
 								prazos acordados.
-							</p>
-							<p>
+							</span>
+							<span>
 								Com o objetivo de se destacar no mercado, a Paktor adota os
 								princípios do Lean Construction (obra como linha de produção),
 								buscando otimizar recursos, minimizar desperdícios e atender aos
@@ -42,7 +43,7 @@ const AboutPage = () => {
 								compromisso com o respeito aos contratos firmados, criando
 								relacionamentos duradouros e parcerias de longo prazo com
 								clientes e fornecedores.
-							</p>
+							</span>
 						</p>
 					</div>
 
