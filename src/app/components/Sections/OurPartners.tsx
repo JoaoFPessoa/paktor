@@ -9,11 +9,11 @@ const OurPartners = () => {
 		{
 			id: 3,
 			name: 'Casa do Construtor',
-			logo: '/partners/casa-do-construtor.png',
+			logo: '/partners/casa-do-construto.png',
 		},
 		{ id: 4, name: 'Gerdau', logo: '/partners/gerdau.png' },
 		{ id: 5, name: 'Leroy Merlin', logo: '/partners/leroy-merlin.png' },
-		{ id: 6, name: 'Modena Santos', logo: '/partners/modena-santos.jpg' },
+		{ id: 6, name: 'Modena Santos', logo: '/partners/modena-santo.jpg' },
 		{ id: 7, name: 'Pecau', logo: '/partners/pecau.jpg' },
 		{ id: 8, name: 'Porto Bello', logo: '/partners/porto-bello.png' },
 		{ id: 9, name: 'Proxx', logo: '/partners/proxx.png' },
