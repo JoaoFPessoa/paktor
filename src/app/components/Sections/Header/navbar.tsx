@@ -26,7 +26,9 @@ export default function Navbar() {
 							xmlns="http://www.w3.org/2000/svg"
 						>
 							<path
+								//@ts-ignore
 								strokeLinecap="round"
+								//@ts-ignore
 								strokeLinejoin="round"
 								strokeWidth="2"
 								d="M4 6h16M4 12h16M4 18h16"

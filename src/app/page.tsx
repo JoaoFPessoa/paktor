@@ -17,7 +17,10 @@ export default function Home() {
 		<main className={montserrat.className}>
 			<div>
 				<Header />
-				<div className="px-[5%] md:px-[10%] gap-10 flex flex-col" id="body">
+				<div
+					className="px-3 md:px-[5%] lg:px-[10%] gap-10 flex flex-col"
+					id="body"
+				>
 					<div>
 						<BannerClientPage />
 					</div>

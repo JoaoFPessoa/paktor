@@ -20,10 +20,9 @@ export default function Banner() {
 
 	return (
 		<div
-			className=" rounded-2xl overflow-hidden h-[80vh]"
+			className="rounded-2xl overflow-hidden h-[80vh] left-[calc(-4%)] md:[left:calc(-6%)] lg:[left:calc(-13%)]"
 			style={{
 				position: 'relative',
-				left: 'calc(-13%)', // Offset the parent's 10% padding
 				width: 'calc(100vw)', // Full viewport width
 			}}
 		>
