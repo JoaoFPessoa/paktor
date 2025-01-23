@@ -1,10 +1,19 @@
+'use client';
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import { Instagram, Youtube } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 import Image from 'next/image';
 import { BsWhatsapp } from 'react-icons/bs';
+import { usePathname } from 'next/navigation';
 
 const Footer = () => {
+	const pathname = usePathname();
+
+	// Do not render the footer if the route is '/admin'
+	if (pathname === '/admin') {
+		return null;
+	}
+
 	return (
 		<div className="  w-full bg-gray-50 border-t mt-20">
 			<div className=" max-w-6xl mx-auto px-8 py-12">
