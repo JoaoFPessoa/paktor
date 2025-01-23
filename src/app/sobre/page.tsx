@@ -47,12 +47,12 @@ const AboutPage = () => {
 						</p>
 					</div>
 
-					<div>
+					<div className="flex  justify-end">
 						<Image
 							src={'/sobre/socios.jpg'}
 							alt="Two people looking at laptop"
-							height={400}
-							width={600}
+							height={200}
+							width={380}
 							className="rounded-lg object-cover"
 							sizes="(max-width: 768px) 100vw, 600px"
 						/>
