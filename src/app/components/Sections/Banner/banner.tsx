@@ -53,13 +53,10 @@ export default function Banner() {
 			</div>
 			<div className="absolute inset-0 bg-black opacity-40"></div>
 			<div className="absolute inset-0 flex flex-col gap-2 justify-center items-center text-center text-white z-10">
-				<h1 className="text-5xl font-bold">
-					Paktor, Construção Civil em São Paulo
-				</h1>
+				<h1 className="text-5xl font-bold">Paktor, Engenharia e Construções</h1>
 				<h2 className="text-2xl mb-10">
 					A obra do seu jeito, com a qualidade que você merece.
 				</h2>
-				<QuoteButton />
 			</div>
 		</div>
 	);

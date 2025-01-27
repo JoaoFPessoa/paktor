@@ -13,10 +13,8 @@ const AboutPage = () => {
 			<div className=" px-[10%] mx-auto p-8">
 				<div className="  grid md:grid-cols-2 gap-12 items-center ">
 					<div className="space-y-6">
-						<div className="text-orange-500 font-medium">Nossa história</div>
-
 						<h1 className="text-3xl md:text-5xl font-bold leading-tight">
-							Referência no mercado da construção civil.
+							Nossa história
 						</h1>
 
 						<p className="text-sm md:text-base flex flex-col gap-2 text-gray-600 leading-relaxed">
@@ -61,7 +59,7 @@ const AboutPage = () => {
 
 				<div className="w-full  grid md:grid-cols-3 gap-6 mt-24">
 					<Card>
-						<CardContent className="pt-6">
+						<CardContent className="text-center pt-6">
 							<div className="text-2xl md:text-4xl font-bold">Missão</div>
 							<div className="text-gray-600 mt-2 tracking-wide">
 								Trabalhar utilizando técnicas específicas para cada tipo de
@@ -73,7 +71,7 @@ const AboutPage = () => {
 					</Card>
 
 					<Card>
-						<CardContent className="pt-6">
+						<CardContent className="text-center pt-6">
 							<div className="text-2xl md:text-4xl  font-bold">Visão</div>
 							<div className="text-gray-600 mt-2">
 								Ser referência no mercado da construção civil, utilizando
@@ -84,18 +82,20 @@ const AboutPage = () => {
 					</Card>
 
 					<Card>
-						<CardContent className="pt-6">
+						<CardContent className="text-center pt-6">
 							<div className="text-2xl md:text-4xl  font-bold">Valores</div>
-							<div className="text-gray-600 mt-2">
+							<div className="text-gray-600  mt-2">
 								<ul className="space-y-2 ">
-									<li className="flex items-center gap-2">Integridade</li>
-									<li className="flex items-center gap-2">
+									<li className="flex justify-center items-center gap-2">
+										Integridade
+									</li>
+									<li className="flex justify-center items-center gap-2">
 										Ética e transparência
 									</li>
-									<li className="flex items-center gap-2">
+									<li className="flex justify-center items-center gap-2">
 										Comprometimento e Responsabilidade
 									</li>
-									<li className="flex items-center gap-2">
+									<li className="flex justify-center items-center gap-2">
 										Atitude e Liderança
 									</li>
 								</ul>

@@ -16,7 +16,7 @@ export default function Navbar() {
 				<div className="block">
 					<button
 						onClick={toggleMenu}
-						className="text-gray-800 focus:outline-none"
+						className="text-white focus:outline-none"
 					>
 						<svg
 							className="w-6 h-6"

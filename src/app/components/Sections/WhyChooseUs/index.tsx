@@ -7,7 +7,7 @@ export default function WhyChooseUsSection() {
 				Por que nos escolher?
 			</h1>
 			<div className="flex w-full flex-wrap md:flex-nowrap  mt-3 md:mt-10  gap-4">
-				<Card title={'Experiência'} description="20+ anos" />
+				<Card title={'Experiência'} description="10+ anos" />
 				<Card title={'Qualidade'} description="5 estrelas pelos clientes">
 					<div
 						style={{

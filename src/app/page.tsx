@@ -30,7 +30,7 @@ export default function Home() {
 					<OurPartners />
 					<WhyChooseUsSection />
 					<Testimonials />
-					<Contact />
+					{/* <Contact /> */}
 				</div>
 			</div>
 		</main>

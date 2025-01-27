@@ -1,6 +1,4 @@
 import { FaUserCircle } from 'react-icons/fa';
-import Star from '../../../../../public/starts.png';
-import Image from 'next/image';
 
 type Props = {
 	name: string;
