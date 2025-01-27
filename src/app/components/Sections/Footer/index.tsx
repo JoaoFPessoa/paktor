@@ -15,56 +15,45 @@ const Footer = () => {
 	}
 
 	return (
-		<div className="  w-full bg-[#545454] border-t mt-20">
-			<div className=" max-w-6xl mx-auto px-8 py-12">
+		<div className=" w-full bg-[#545454] border-t mt-20">
+			<div className=" w-fit mx-auto p-4">
 				<div className=" grid grid-cols-1 md:grid-cols-3 gap-8">
-					<div className="space-y-4">
-						<Image
-							src="/logo-verde-branco.png"
-							alt="logo"
-							width={300}
-							height={300}
-						/>
-						<p className="text-white">
-							A obra do seu jeito, com a qualidade que você merece.
-						</p>
-						<div className="flex items-center justify-center">
+					<div className="flex flex-col justify-between ">
+						<div>
+							<Image
+								src="/logo-verde-branco.png"
+								alt="logo"
+								width={300}
+								height={300}
+							/>
+							<p className="text-white">
+								A obra do seu jeito, com a qualidade que você merece.
+							</p>
+						</div>
+						<div className="flex ">
 							<div className="flex gap-8">
 								<a
 									target="_blank"
-									className="flex items-center text-white justify-center flex-col"
+									className="flex items-center gap-2 text-sm text-white justify-center flex-col"
 									href="https://www.instagram.com/paktor.engenharia/"
 								>
-									<Instagram className="h-10 w-10 text-white  cursor-pointer" />
+									<Instagram className=" h-10 w-10 text-white  cursor-pointer" />
 									@paktor.engenharia
 								</a>
-								<a
-									className="flex items-center text-white justify-center flex-col"
-									target="_blank"
-									href="https://wa.me/5511999001074"
-								>
+								<a target="_blank" href="https://wa.me/5511999001074">
 									<BsWhatsapp className="h-10 w-10 text-white  cursor-pointer" />
-									Whatsapp
 								</a>
 							</div>
 						</div>
 					</div>
 
-					<div className="text-center text-white">
-						<ul className="space-y-2   flex flex-col gap-2">
-							<a href="/">Início</a>
-							<a href="/sobre">Sobre</a>
-							<a href="#services">Serviços</a>
-							<a href="#projects">Projetos</a>
-							<a href="/contato">Contatos</a>
-						</ul>
-					</div>
+					<div className="text-center text-white"></div>
 
 					<div id="maps">
 						<iframe
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.729941800519!2d-46.8684646!3d-23.506234799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03d22402dcaf%3A0xdb60b0b06fe168e7!2sAv.%20Trindade%2C%20254%20-%20Bethaville%20I%2C%20Barueri%20-%20SP%2C%2006404-326!5e0!3m2!1spt-BR!2sbr!4v1737998113169!5m2!1spt-BR!2sbr"
-							width="600"
-							height="450"
+							width="400"
+							height="200"
 							style={{ border: 0 }}
 							loading="lazy"
 						></iframe>

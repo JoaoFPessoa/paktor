@@ -7,31 +7,37 @@ export default function Testimonials() {
 	return (
 		<div className="w-full mt-10 flex flex-col gap-5 ">
 			<TestimonialCard
-				name="Mariana Souza"
-				description="Contratamos a Paktor para nosso projeto de renovação residencial e não poderíamos estar mais felizes com os resultados. Sua atenção aos detalhes e excelência técnica são verdadeiramente louváveis. Recomendo muito seus serviços."
+				name="Karine A."
+				description="A Paktor realizou o retrofit do meu apartamento, obra com acabamentos de 1ª linha, dentro do prazo e ótima tratativa com eles!"
 				stars={5}
-				date="Out 28 2024"
+				date="26 Jul 2024"
 			/>
 
 			<TestimonialCard
-				name="Olavo Silva"
-				description="A Paktor transformou nosso banheiro desatualizado em um oásis moderno. Sua equipe foi cortês, profissional e concluiu o projeto no prazo. Estou emocionado com o resultado e definitivamente os contrataria novamente."
+				name="Sergio P"
+				description="Reformei minha sala comercial com a Paktor e fizeram uma obra rápida, organizada, limpa e com o custo de acordo com a trabalho que eles entregam"
 				stars={5}
-				date="Jun 12 2023"
+				date="24 08 2023"
 			/>
 
 			<TestimonialCard
-				name="Julio Almeida"
-				description="Da concepção à conclusão, a Paktor demonstrou profissionalismo e experiência excepcionais. Eles ouviram nossas ideias e as transformaram em realidade, superando nossas expectativas. Recomendo muito seus serviços."
+				name="Jorge F"
+				description="Solicitei a Paktor para fazer uma área gourmet no quintal da minha casa e durante o estudo inicial eles propuseram utilizar um deck de madeira plástica, que é sustentável e não precisa de manutenção. Como fizeram um trabalho muito bom, solicitei também para realizarem a reforma da minha suíte"
 				stars={5}
 				date="Mai 19 2023"
 			/>
 
 			<TestimonialCard
-				name="Patrícia Lima"
-				description="A Paktor fez um trabalho excepcional na renovação de nossa área de porão. Sua atenção aos detalhes e comprometimento com a qualidade foram evidentes durante todo o projeto. Estou muito satisfeita com os resultados e os contrataria novamente sem hesitação."
+				name="Silvia V"
+				description="Contratei a Paktor para construir a minha casa e ficou igual ao projeto 3D inicial, o que eu e meu marido adoramos. Acompanhei o serviço deles de perto e sempre me deram a tranquilidade e transparência de cada etapa do projeto, desde a explicação da fundação até a sugestão de revestimento e acabamentos mais em conta e de qualidade. Nota 10 !"
 				stars={5}
-				date="Ago 7 2022"
+				date="Jul 06 2022"
+			/>
+			<TestimonialCard
+				name="Emerson B"
+				description="Fiz a reforma do meu novo ateliê com a Paktor, e entregaram antes do prazo e com uma qualidade excelente"
+				stars={5}
+				date="Dez 06 2021"
 			/>
 		</div>
 	);
