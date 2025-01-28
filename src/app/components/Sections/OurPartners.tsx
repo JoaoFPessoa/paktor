@@ -35,14 +35,14 @@ const OurPartners = () => {
 						{[...partners, ...partners].map((partner, index) => (
 							<div
 								key={index}
-								className="flex-shrink-0 w-36 h-24 flex items-center justify-center bg-white rounded-lg shadow-lg"
+								className="flex-shrink-0 w-36 h-24 flex items-center justify-center bg-white rounded-lg shadow-lg my-2"
 								aria-label={`Logo do parceiro ${partner.name}`}
 							>
 								<Image
 									src={partner.logo}
 									alt={partner.name}
-									width={120}
-									height={80}
+									width={180}
+									height={100}
 									className="object-contain"
 								/>
 							</div>

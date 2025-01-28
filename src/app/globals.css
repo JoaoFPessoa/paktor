@@ -40,3 +40,12 @@ body {
 .animate-scroll:hover {
 	animation-play-state: paused;
 }
+/* Custom styles for gallery grid */
+.gallery-grid {
+	@apply flex flex-wrap justify-center gap-4; /* Use Flexbox to center items */
+}
+
+.gallery-item {
+	@apply flex; /* Ensure the item is a flex container */
+	flex-direction: column; /* Align items vertically */
+}

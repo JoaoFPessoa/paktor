@@ -7,14 +7,9 @@ type Props = {
 	date: string;
 };
 
-export default function TestimonialCard({
-	name,
-	description,
-	date,
-	stars,
-}: Props) {
+export default function TestimonialCard({ name, description, date }: Props) {
 	return (
-		<div className="">
+		<div className="shadow-lg bg-white w-full md:w-1/3 rounded-lg p-2 my-2">
 			<div id="profile" className="m-1 flex items-start">
 				<FaUserCircle className=" w-[40px] h-[40px]" />
 				<div className="ml-2">
@@ -22,7 +17,7 @@ export default function TestimonialCard({
 					<span className="text-sm text-gray-500">{date}</span>
 				</div>
 			</div>
-			<div id="description" className="w-1/3 mt-3">
+			<div id="description" className="px-2 md:px-0  mt-3 text-sm md:text-base">
 				{description}
 			</div>
 		</div>

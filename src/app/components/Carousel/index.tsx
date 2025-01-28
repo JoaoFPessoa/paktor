@@ -1,18 +1,16 @@
+'use client';
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Image, { StaticImageData } from 'next/image';
+import { Project } from '@/types/project';
+import { useRouter } from 'next/navigation';
 
 interface ImageCarouselProps {
 	deviceType?: string;
-	images: {
-		src: StaticImageData;
-		swappedImage?: StaticImageData;
-		alt: string;
-		title?: string;
-		description?: string;
-	}[];
+	project: Project[];
 	autoPlay?: boolean;
+	isServiceSectionCarousel?: boolean;
 }
 
 const responsive = {
@@ -39,77 +37,78 @@ const responsive = {
 	},
 };
 
-class ImageCarousel extends React.Component<ImageCarouselProps> {
-	state = {
-		hoveredIndex: -1,
+const ImageCarousel: React.FC<ImageCarouselProps> = ({
+	deviceType,
+	project,
+	autoPlay,
+	isServiceSectionCarousel,
+}) => {
+	const [hoveredIndex, setHoveredIndex] = React.useState(-1);
+	const router = useRouter();
+
+	const handleMouseEnter = (index: number) => {
+		setHoveredIndex(index);
 	};
 
-	handleMouseEnter = (index: number) => {
-		this.setState({ hoveredIndex: index });
+	const handleMouseLeave = () => {
+		setHoveredIndex(-1);
 	};
 
-	handleMouseLeave = () => {
-		this.setState({ hoveredIndex: -1 });
-	};
-
-	render() {
-		const { deviceType, images, autoPlay } = this.props;
-		const { hoveredIndex } = this.state;
-
-		return (
-			<Carousel
-				swipeable={deviceType === 'mobile' ? true : false}
-				draggable={deviceType === 'mobile' ? true : false}
-				showDots={false}
-				responsive={responsive}
-				ssr={true}
-				infinite={true}
-				autoPlay={autoPlay}
-				autoPlaySpeed={2500}
-				customTransition="transform 500ms ease-in-out"
-				centerMode
-				transitionDuration={200}
-				containerClass="carousel-container"
-				itemClass="carousel-item" // Add a class for each item
-				deviceType={deviceType}
-				pauseOnHover={true}
-				focusOnSelect
-			>
-				{images.map((image, index) => (
-					<div
-						key={index}
-						onMouseEnter={() => this.handleMouseEnter(index)}
-						onMouseLeave={this.handleMouseLeave}
-					>
-						<Image
-							className="grayscale-0 hover:grayscale transform hover:scale-105 transition duration-300"
-							src={
-								hoveredIndex === index && image.swappedImage
-									? image.swappedImage
-									: image.src
-							}
-							alt={image.alt}
-							height={500}
-							width={333}
-							sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw" // Responsive sizes
-							style={{
-								width: '100%', // Make the image responsive
-								height: 'auto', // Maintain aspect ratio
-							}}
-							priority={index < 3} // Prioritize the first 3 images
-							loading={index >= 3 ? 'lazy' : 'eager'} // Lazy-load the rest
-						/>
-						{image.title && (
-							<div className="mt-2 w-[80%]">
-								<h1 className="font-semibold md:text-md">{image.title}</h1>
-								<h2 className="text-gray-700 text-sm">{image.description}</h2>
-							</div>
-						)}
-					</div>
-				))}
-			</Carousel>
-		);
-	}
-}
+	return (
+		<Carousel
+			swipeable={deviceType === 'mobile' ? true : false}
+			draggable={deviceType === 'mobile' ? true : false}
+			showDots={false}
+			responsive={responsive}
+			ssr={true}
+			infinite={true}
+			autoPlay={autoPlay}
+			autoPlaySpeed={2500}
+			customTransition="transform 500ms ease-in-out"
+			centerMode
+			transitionDuration={200}
+			containerClass="carousel-container"
+			itemClass="carousel-item" // Add a class for each item
+			deviceType={deviceType}
+			pauseOnHover={true}
+			focusOnSelect
+		>
+			{project?.map((image, index) => (
+				<div
+					key={index}
+					onMouseEnter={() => handleMouseEnter(index)}
+					onMouseLeave={handleMouseLeave}
+					className={`mt-8  ${
+						isServiceSectionCarousel ? 'cursor-default' : 'cursor-pointer'
+					}`}
+					onClick={() =>
+						isServiceSectionCarousel
+							? console.log('')
+							: router.push(`/projetos/${image.id}`)
+					}
+				>
+					<Image
+						className="grayscale-0  object-cover w-[350px] h-[230px] hover:grayscale transform hover:scale-105 transition duration-300 rounded-lg"
+						src={
+							hoveredIndex === index && image.secondary_image
+								? image.secondary_image
+								: image.main_image
+						}
+						alt={image.title}
+						height={400}
+						width={333}
+						priority={index < 3} // Prioritize the first 3 images
+						loading={index >= 3 ? 'lazy' : 'eager'} // Lazy-load the rest
+					/>
+					{image.title && (
+						<div className="mt-2 w-[80%]">
+							<h1 className="font-semibold md:text-md">{image.title}</h1>
+						</div>
+					)}
+				</div>
+			))}
+		</Carousel>
+	);
+};
 
 export default ImageCarousel;

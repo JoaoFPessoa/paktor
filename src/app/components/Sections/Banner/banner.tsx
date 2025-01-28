@@ -20,7 +20,7 @@ export default function Banner() {
 
 	return (
 		<div
-			className="rounded-2xl overflow-hidden h-[80vh] left-[calc(-4%)] md:[left:calc(-6%)] lg:[left:calc(-13%)]"
+			className=" overflow-hidden h-[80vh] left-[calc(-3%)] md:[left:calc(-6%)] lg:[left:calc(-13%)]"
 			style={{
 				position: 'relative',
 				width: 'calc(100vw)', // Full viewport width

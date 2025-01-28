@@ -42,7 +42,44 @@ const ProjectsList = () => {
 	};
 
 	const handleDeleteProject = async (projectId: string) => {
-		console.log(projectId);
+		setIsLoading(true);
+		try {
+			// Show a confirmation dialog to the user (optional but recommended)
+			const confirmDelete = window.confirm(
+				'Tem certeza que deseja remover este projeto? A ação não poderá ser desfeita.',
+			);
+			if (!confirmDelete) return;
+
+			// Make a DELETE request to the API with the project ID
+			const response = await fetch(`/api/projects`, {
+				method: 'DELETE',
+				body: JSON.stringify({ projectId }),
+			});
+
+			// Handle the response
+			if (!response.ok) {
+				throw new Error('Failed to delete the project');
+			}
+
+			// Remove the project from the local state after deletion
+			setProjectsData((prevProjects) =>
+				prevProjects.filter((project) => project.id !== projectId),
+			);
+
+			// Show a success message
+			toast.success('Project deleted successfully');
+		} catch (error) {
+			// Handle errors
+			setError(
+				error instanceof Error ? error.message : 'An unexpected error occurred',
+			);
+			toast.error(
+				error instanceof Error ? error.message : 'An unexpected error occurred',
+			);
+		} finally {
+			setIsLoading(false);
+			setSelectedProject(null);
+		}
 	};
 
 	useEffect(() => {

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Footer from './components/Sections/Footer';
 import Head from 'next/head';
+import { WhatsAppButton } from './components/Whatsappbutton';
 
 export const metadata: Metadata = {
 	title: 'Paktor - Engenharia e construção',
@@ -22,6 +23,7 @@ export default function RootLayout({
 			<body>
 				<>
 					{children}
+					<WhatsAppButton />
 					<Footer />
 				</>
 			</body>

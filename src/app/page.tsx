@@ -19,7 +19,7 @@ export default function Home() {
 			<div>
 				<Header />
 				<div
-					className="px-3 md:px-[5%] lg:px-[10%] gap-10 flex flex-col"
+					className="px-3 md:px-[5%] overflow-x-hidden lg:px-[10%] gap-10 flex flex-col"
 					id="body"
 				>
 					<div>

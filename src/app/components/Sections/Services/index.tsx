@@ -2,69 +2,70 @@ import CarouselClientPage from '@/app/carouselClientPage';
 import ImageOne from '../../../../../public/services-image-1.png';
 import ImageTwo from '../../../../../public/services-image-2.png';
 import ImageThree from '../../../../../public/services-image-3.png';
+import { Project } from '@/types/project';
 
 export default function ServicesSection() {
-	const servicesImages = [
+	const servicesImages: Project[] = [
 		{
-			src: ImageThree,
+			main_image: ImageThree,
 			title: 'Construção residencial e comercial',
 			description:
 				'Remember to mention the author and the source when using this image. Copy the attribution details below and include them on your project or website.',
-			swappedImage: ImageTwo,
-			alt: '',
+			additional_images: [''],
+			secondary_image: ImageTwo,
 		},
 		{
-			src: ImageOne,
-			swappedImage: ImageTwo,
-			alt: '',
-			title: 'Construção residencial e comercial',
-			description:
-				'Remember to mention the author and the source when using this image. Copy the attribution details below and include them on your project or website.',
-		},
-		{
-			src: ImageThree,
-			title: 'Construção residencial e comercial',
-			description:
-				'Remember to mention the author and the source when using this image. Copy the attribution details below and include them on your project or website.',
-			swappedImage: ImageTwo,
-			alt: '',
-		},
-		{
-			src: ImageOne,
-			swappedImage: ImageTwo,
-			alt: '',
+			main_image: ImageOne,
+			additional_images: [''],
+			secondary_image: ImageTwo,
 			title: 'Construção residencial e comercial',
 			description:
 				'Remember to mention the author and the source when using this image. Copy the attribution details below and include them on your project or website.',
 		},
 		{
-			src: ImageThree,
+			main_image: ImageThree,
 			title: 'Construção residencial e comercial',
 			description:
 				'Remember to mention the author and the source when using this image. Copy the attribution details below and include them on your project or website.',
-			swappedImage: ImageTwo,
-			alt: '',
+			additional_images: [''],
+			secondary_image: ImageTwo,
 		},
 		{
-			src: ImageOne,
-			swappedImage: ImageTwo,
-			alt: '',
+			main_image: ImageOne,
+			additional_images: [''],
+			secondary_image: ImageTwo,
 			title: 'Construção residencial e comercial',
 			description:
 				'Remember to mention the author and the source when using this image. Copy the attribution details below and include them on your project or website.',
 		},
 		{
-			src: ImageThree,
+			main_image: ImageThree,
 			title: 'Construção residencial e comercial',
 			description:
 				'Remember to mention the author and the source when using this image. Copy the attribution details below and include them on your project or website.',
-			swappedImage: ImageTwo,
-			alt: '',
+			additional_images: [''],
+			secondary_image: ImageTwo,
 		},
 		{
-			src: ImageOne,
-			swappedImage: ImageTwo,
-			alt: '',
+			main_image: ImageOne,
+			additional_images: [''],
+			secondary_image: ImageTwo,
+			title: 'Construção residencial e comercial',
+			description:
+				'Remember to mention the author and the source when using this image. Copy the attribution details below and include them on your project or website.',
+		},
+		{
+			main_image: ImageThree,
+			title: 'Construção residencial e comercial',
+			description:
+				'Remember to mention the author and the source when using this image. Copy the attribution details below and include them on your project or website.',
+			additional_images: [''],
+			secondary_image: ImageTwo,
+		},
+		{
+			main_image: ImageOne,
+			additional_images: [''],
+			secondary_image: ImageTwo,
 			title: 'Construção residencial e comercial',
 			description:
 				'Remember to mention the author and the source when using this image. Copy the attribution details below and include them on your project or website.',
@@ -86,7 +87,11 @@ export default function ServicesSection() {
 				oferecer ao cliente a
 				<b> melhor experiência possível, sem dor de cabeça.</b>
 			</h2>
-			<CarouselClientPage images={servicesImages} autoPlay={false} />
+			<CarouselClientPage
+				isServiceSectionCarousel
+				definedProjects={servicesImages}
+				autoPlay={false}
+			/>
 		</div>
 	);
 }

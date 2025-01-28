@@ -5,7 +5,10 @@ import TestimonialCard from './TestimonialCard';
 
 export default function Testimonials() {
 	return (
-		<div className="w-full mt-10 flex flex-col gap-5 ">
+		<div className="w-full mt-10 flex flex-col gap-12 md:gap-2 ">
+			<h1 className="font-bold text-2xl md:text-3xl tracking-tighter mt-4 mb-2">
+				Veja o que nossos clientes falam
+			</h1>
 			<TestimonialCard
 				name="Karine A."
 				description="A Paktor realizou o retrofit do meu apartamento, obra com acabamentos de 1ª linha, dentro do prazo e ótima tratativa com eles!"

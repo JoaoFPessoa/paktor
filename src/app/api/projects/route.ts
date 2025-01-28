@@ -2,6 +2,13 @@ import { v2 as cloudinary } from 'cloudinary';
 import { supabase } from '@/app/supabase';
 import { NextResponse } from 'next/server';
 
+// Configure Cloudinary
+cloudinary.config({
+	cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+	api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
+	api_secret: process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET,
+});
+
 export async function POST(request: Request) {
 	try {
 		const {
@@ -63,6 +70,7 @@ export async function GET() {
 
 export async function DELETE(req: Request) {
 	const { projectId } = await req.json();
+	console.log({ projectId });
 
 	if (!projectId) {
 		return NextResponse.json(

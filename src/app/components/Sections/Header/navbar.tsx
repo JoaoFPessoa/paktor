@@ -50,7 +50,7 @@ export default function Navbar() {
 						<Button href="/">Início</Button>
 						<Button href="/sobre">Sobre</Button>
 						<Button href="#services">Serviços</Button>
-						<Button href="#projects">Projetos</Button>
+						<Button href="/projetos">Projetos</Button>
 						<Button href="/contato">Contatos</Button>
 						<QuoteButton />
 					</div>
@@ -65,7 +65,7 @@ export default function Navbar() {
 				<Button href="/">Início</Button>
 				<Button href="/sobre">Sobre</Button>
 				<Button href="#services">Serviços</Button>
-				<Button href="#projects">Projetos</Button>
+				<Button href="/projetos">Projetos</Button>
 				<Button href="/contato">Contatos</Button>
 				<QuoteButton />
 			</div>
