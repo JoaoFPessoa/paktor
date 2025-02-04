@@ -3,6 +3,12 @@ import './globals.css';
 import Footer from './components/Sections/Footer';
 import Head from 'next/head';
 import { WhatsAppButton } from './components/Whatsappbutton';
+import { Montserrat } from '@next/font/google';
+
+const montserrat = Montserrat({
+	subsets: ['latin'],
+	weight: ['300', '700'],
+});
 
 export const metadata: Metadata = {
 	title: 'Paktor - Engenharia e construção',
@@ -20,7 +26,7 @@ export default function RootLayout({
 			<Head>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<body>
+			<body className={montserrat.className}>
 				<>
 					{children}
 					<WhatsAppButton />
