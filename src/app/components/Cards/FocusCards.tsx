@@ -26,7 +26,7 @@ export const Card = React.memo(
 				onMouseEnter={() => setHovered(index)}
 				onMouseLeave={() => setHovered(null)}
 				className={cn(
-					'rounded-lg relative bg-gray-100 overflow-hidden h-60 md:h-[650px] w-full transition-all duration-300 ease-out',
+					'rounded-lg relative bg-gray-100 overflow-hidden h-60 md:h-[550px] w-full transition-all duration-300 ease-out',
 					hovered !== null && hovered !== index && 'blur-sm',
 				)}
 			>
@@ -115,7 +115,7 @@ export function FocusCards({ cards, imagesPerPage = 6 }: FocusCardsProps) {
 
 	return (
 		<div className="w-full">
-			<div className="grid grid-cols-1 md:grid-cols-4 gap-10 my-12 w-full">
+			<div className="grid grid-cols-1 md:grid-cols-3 gap-10 my-12 w-full">
 				{visibleCards?.map((card, index) => (
 					<Card
 						key={card ?? index}

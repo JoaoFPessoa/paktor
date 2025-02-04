@@ -12,7 +12,7 @@ export const WhatsAppButton = () => {
 			href={whatsappURL}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="fixed bottom-5 right-5 bg-green-500 rounded-full p-3 shadow-lg z-50 transition-transform transform hover:scale-105"
+			className="fixed bottom-5 right-5  shadow-lg z-50 transition-transform transform hover:scale-105"
 		>
 			<Image
 				alt="redirect-to-whatsapp"

@@ -9,7 +9,7 @@ type Props = {
 
 export default function TestimonialCard({ name, description, date }: Props) {
 	return (
-		<div className="shadow-lg bg-white w-full md:w-1/3 rounded-lg p-2 my-2">
+		<div className="shadow-lg bg-white w-full md:w-[30%] rounded-lg p-2 my-2">
 			<div id="profile" className="m-1 flex items-start">
 				<FaUserCircle className=" w-[40px] h-[40px]" />
 				<div className="ml-2">

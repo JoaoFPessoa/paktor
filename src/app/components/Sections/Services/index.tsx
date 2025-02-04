@@ -74,10 +74,10 @@ export default function ServicesSection() {
 
 	return (
 		<div className="pt-4 md:pt-10" id="services">
-			<h1 className="leading-45 text-2xl font-extrabold tracking-tight md:text-3xl">
+			<h1 className="leading-45 text-2xl font-extrabold tracking-tight md:text-4xl">
 				Nossos serviços
 			</h1>
-			<h2 className=" text-gray-800 text-base  md:w-[60%] py-3">
+			<h2 className=" text-gray-800 text-base  md:text-lg md:w-[80%] py-3">
 				Soluções especializadas em reformas de casas, apartamentos e salas
 				comerciais, bem como a construção de imóveis desde a fundação até o
 				acabamento final. A Paktor Engenharia transforma projetos em realidade
