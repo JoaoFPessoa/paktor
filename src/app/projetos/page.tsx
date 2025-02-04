@@ -34,7 +34,7 @@ export default function Projects() {
 		<div className="min-h-screen w-full flex flex-col items-center">
 			<Header />
 
-			<main className="w-full max-w-7xl px-4 mt-24 lg:mt-20">
+			<main className="w-full max-w-[80%] px-4 mt-24 lg:mt-20">
 				<h1 className="text-center text-4xl font-bold mb-12">
 					Nossos projetos
 				</h1>
@@ -42,7 +42,7 @@ export default function Projects() {
 				{loading ? (
 					<SkeletonGrid />
 				) : (
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 mb-32">
 						{projects?.map((project, index) => (
 							<ImageContainer key={project.id || index} project={project} />
 						))}

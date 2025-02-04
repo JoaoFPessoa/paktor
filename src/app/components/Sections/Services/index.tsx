@@ -78,14 +78,12 @@ export default function ServicesSection() {
 				Nossos serviços
 			</h1>
 			<h2 className=" text-gray-800 text-base  md:w-[60%] py-3">
-				Executando reformas em <b>casas, apartamentos e salas comerciais</b>,
-				bem como construindo empreendimentos desde a fundação até o acabamento
-				final, possuindo um forte viés sustentável -{' '}
-				<b>energia solar e água de reúso</b> - como principal diferencial em
-				seus projetos, agregando valores da vivência em todas as etapas da obra,
-				com o conhecimento técnico necessário para a elaboração dos mesmos, para
-				oferecer ao cliente a
-				<b> melhor experiência possível, sem dor de cabeça.</b>
+				Soluções especializadas em reformas de casas, apartamentos e salas
+				comerciais, bem como a construção de imóveis desde a fundação até o
+				acabamento final. A Paktor Engenharia transforma projetos em realidade
+				com agilidade, qualidade e transparência. Entregando sempre dentro dos
+				prazos e com custos planejados, construindo relações transparentes e
+				garantindo a satisfação do parceiro.
 			</h2>
 			<CarouselClientPage
 				isServiceSectionCarousel

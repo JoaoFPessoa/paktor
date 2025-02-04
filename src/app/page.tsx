@@ -7,6 +7,7 @@ import ServicesSection from './components/Sections/Services';
 import Contact from './components/Sections/Contact';
 import { Montserrat } from '@next/font/google';
 import OurPartners from './components/Sections/OurPartners';
+import OurDifferencesSection from './components/OurDifferences';
 
 const montserrat = Montserrat({
 	subsets: ['latin'],
@@ -27,8 +28,9 @@ export default function Home() {
 					</div>
 					<ServicesSection />
 					<Projects />
-					<OurPartners />
 					<WhyChooseUsSection />
+					<OurDifferencesSection />
+					<OurPartners />
 					<Testimonials />
 					{/* <Contact /> */}
 				</div>

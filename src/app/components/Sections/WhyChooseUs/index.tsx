@@ -18,16 +18,13 @@ export default function WhyChooseUsSection() {
 						}}
 					>
 						<ul>
-							<li>
-								- Serviços executados de acordo <br /> com as normas técnicas
-								ABNT
-							</li>
-							<li> - Conclusão no prazo determinado</li>
-							<li> - Garantia de obra</li>
+							<li>- Cumprimento de Prazos</li>
+							<li> - Gerenciamento de Materiais e Fornecedores</li>
+							<li> - Controle de Qualidade Rigoroso</li>
 						</ul>
 					</div>
 				</Card>
-				<Card title={'Serviço'} description="">
+				<Card title={'Serviços'} description="">
 					<div
 						style={{
 							display: 'flex',

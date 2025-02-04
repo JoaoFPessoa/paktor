@@ -49,7 +49,7 @@ export default function Navbar() {
 					>
 						<Button href="/">Início</Button>
 						<Button href="/sobre">Sobre</Button>
-						<Button href="#services">Serviços</Button>
+						<Button href="/#services">Serviços</Button>
 						<Button href="/projetos">Projetos</Button>
 						<Button href="/contato">Contatos</Button>
 						<QuoteButton />
@@ -61,10 +61,10 @@ export default function Navbar() {
 
 	const DesktopMenu = () => {
 		return (
-			<div className="md:flex hidden gap-4 justify-between md:px-5 items-center font-semibold">
+			<div className="md:flex hidden gap-4 justify-between  items-center font-semibold">
 				<Button href="/">Início</Button>
 				<Button href="/sobre">Sobre</Button>
-				<Button href="#services">Serviços</Button>
+				<Button href="/#services">Serviços</Button>
 				<Button href="/projetos">Projetos</Button>
 				<Button href="/contato">Contatos</Button>
 				<QuoteButton />
