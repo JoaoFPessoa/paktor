@@ -5,7 +5,7 @@ import TestimonialCard from './TestimonialCard';
 
 export default function Testimonials() {
 	return (
-		<div className="w-full mt-10 flex flex-col gap-12 md:gap-2 ">
+		<div className="w-full max-w-7xl mt-10 flex flex-col gap-12 md:gap-2 ">
 			<h1 className="font-bold text-2xl md:text-3xl tracking-tighter mt-4 mb-2">
 				Veja o que nossos clientes falam
 			</h1>

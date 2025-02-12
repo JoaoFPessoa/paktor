@@ -2,8 +2,8 @@ import Card from './Card';
 
 export default function WhyChooseUsSection() {
 	return (
-		<div>
-			<h1 className="font-bold text-2xl md:text-3xl tracking-tighter md:mt-4">
+		<div className="max-w-7xl w-full">
+			<h1 className="font-bold text-2xl md:text-3xl  tracking-tighter md:mt-4">
 				Por que nos escolher?
 			</h1>
 			<div className="flex w-full flex-wrap md:flex-nowrap  mt-3 md:mt-10  gap-4">

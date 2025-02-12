@@ -22,7 +22,7 @@ const OurPartners = () => {
 	];
 
 	return (
-		<div className="w-full py-16 ">
+		<div className="w-full max-w-7xl py-16 ">
 			<div className=" mx-auto">
 				<h2 className="text-3xl font-bold text-center mb-12">
 					Nossos parceiros

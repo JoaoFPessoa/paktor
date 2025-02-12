@@ -19,13 +19,11 @@ export default function Home() {
 		<main className={montserrat.className}>
 			<div>
 				<Header />
+				<BannerClientPage />
 				<div
-					className="px-3 md:px-[5%] overflow-x-hidden lg:px-[10%] gap-10 flex flex-col"
+					className="my-24 overflow-x-hidden  gap-10 flex flex-col items-center"
 					id="body"
 				>
-					<div>
-						<BannerClientPage />
-					</div>
 					<ServicesSection />
 					<Projects />
 					<WhyChooseUsSection />

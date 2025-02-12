@@ -73,7 +73,7 @@ export default function ServicesSection() {
 	];
 
 	return (
-		<div className="pt-4 md:pt-10" id="services">
+		<div className="pt-4 max-w-7xl" id="services">
 			<h1 className="leading-45 text-2xl font-extrabold tracking-tight md:text-4xl">
 				Nossos serviços
 			</h1>
