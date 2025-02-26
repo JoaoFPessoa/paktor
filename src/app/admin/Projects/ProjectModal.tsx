@@ -4,7 +4,6 @@ import { X, Edit, Trash2, Plus } from 'lucide-react';
 import { ProjectData } from './project-types';
 import { supabase } from '@/app/supabase';
 import { uploadImageToCloudinary } from '@/app/utils/uploadToCloudinary';
-import Button from '@/app/components/button';
 import SubmitButton from '@/app/components/SubmitButton';
 import toast from 'react-hot-toast';
 
