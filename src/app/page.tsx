@@ -1,3 +1,5 @@
+'use client';
+import { motion } from 'framer-motion';
 import Header from './components/Sections/Header/header';
 import Projects from './components/Sections/Projects';
 import BannerClientPage from './bannerClientPage';
@@ -14,23 +16,78 @@ const montserrat = Montserrat({
 	weight: ['400', '700'],
 });
 
+// Animation variants
+const childVariants = {
+	hidden: { opacity: 0, y: 20 },
+	visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+};
+
 export default function Home() {
 	return (
 		<main className={montserrat.className}>
 			<div>
-				<Header />
 				<BannerClientPage />
 				<div
-					className="my-24 overflow-x-hidden  gap-10 flex flex-col items-center"
+					className="my-24 overflow-x-hidden gap-10 flex flex-col items-center"
 					id="body"
 				>
-					<ServicesSection />
-					<Projects />
-					<WhyChooseUsSection />
-					<OurDifferencesSection />
-					<OurPartners />
-					<Testimonials />
-					{/* <Contact /> */}
+					<motion.div
+						variants={childVariants}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true, amount: 0.4 }} // Adjust `amount` as needed
+					>
+						<ServicesSection />
+					</motion.div>
+					<motion.div
+						variants={childVariants}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true, amount: 0.4 }}
+					>
+						<Projects />
+					</motion.div>
+					<motion.div
+						variants={childVariants}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true, amount: 0.4 }}
+						className="w-full flex justify-center"
+					>
+						<WhyChooseUsSection />
+					</motion.div>
+					<motion.div
+						variants={childVariants}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true, amount: 0.4 }}
+					>
+						<OurDifferencesSection />
+					</motion.div>
+					<motion.div
+						variants={childVariants}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true, amount: 0.4 }}
+					>
+						<OurPartners />
+					</motion.div>
+					{/* <motion.div
+						variants={childVariants}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true, amount: 0.4 }}
+					>
+						<Testimonials />
+					</motion.div> */}
+					{/* <motion.div
+						variants={childVariants}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true, amount: 0.2 }}
+					>
+						<Contact />
+					</motion.div> */}
 				</div>
 			</div>
 		</main>

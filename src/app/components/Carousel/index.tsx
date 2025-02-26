@@ -2,7 +2,7 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { Project } from '@/types/project';
 import { useRouter } from 'next/navigation';
 
@@ -15,25 +15,22 @@ interface ImageCarouselProps {
 
 const responsive = {
 	desktop: {
-		breakpoint: {
-			max: 3000,
-			min: 1024,
-		},
+		breakpoint: { max: 3000, min: 1024 },
 		items: 3,
 		slidesToSlide: 1,
 		partialVisibilityGutter: 40,
 	},
 	tablet: {
-		breakpoint: { max: 1024, min: 464 },
+		breakpoint: { max: 1024, min: 768 },
 		items: 2,
 		slidesToSlide: 1,
 		partialVisibilityGutter: 30,
 	},
 	mobile: {
-		breakpoint: { max: 463, min: 0 },
+		breakpoint: { max: 767, min: 0 },
 		items: 1,
 		slidesToSlide: 1,
-		partialVisibilityGutter: 30,
+		partialVisibilityGutter: 20,
 	},
 };
 
@@ -47,7 +44,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 	const router = useRouter();
 
 	const handleMouseEnter = (index: number) => {
-		setHoveredIndex(index);
+		if (deviceType !== 'mobile') setHoveredIndex(index);
 	};
 
 	const handleMouseLeave = () => {
@@ -56,8 +53,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
 	return (
 		<Carousel
-			swipeable={deviceType === 'mobile' ? true : false}
-			draggable={deviceType === 'mobile' ? true : false}
+			swipeable={deviceType === 'mobile'}
+			draggable={deviceType === 'mobile'}
 			showDots={false}
 			responsive={responsive}
 			ssr={true}
@@ -68,7 +65,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 			centerMode
 			transitionDuration={200}
 			containerClass="carousel-container"
-			itemClass="carousel-item" // Add a class for each item
+			itemClass="carousel-item"
 			deviceType={deviceType}
 			pauseOnHover={true}
 			focusOnSelect
@@ -78,31 +75,45 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 					key={index}
 					onMouseEnter={() => handleMouseEnter(index)}
 					onMouseLeave={handleMouseLeave}
-					className={`mt-8  ${
+					className={`mt-8 bg-white pb-6 rounded-lg ${
 						isServiceSectionCarousel ? 'cursor-default' : 'cursor-pointer'
 					}`}
 					onClick={() =>
 						isServiceSectionCarousel
-							? console.log('')
+							? null
 							: router.push(`/projetos/${image.id}`)
 					}
 				>
-					<Image
-						className="grayscale-0  object-cover w-[350px] h-[230px] hover:grayscale transform hover:scale-105 transition duration-300 rounded-lg"
-						src={
-							hoveredIndex === index && image.secondary_image
-								? image.secondary_image
-								: image.main_image
-						}
-						alt={image.title}
-						height={400}
-						width={333}
-						priority={index < 3} // Prioritize the first 3 images
-						loading={index >= 3 ? 'lazy' : 'eager'} // Lazy-load the rest
-					/>
+					<div className="relative w-[95%] h-[230px]">
+						<Image
+							className="absolute top-0 left-0 w-full h-full object-cover rounded-lg transition-opacity duration-700"
+							src={image.main_image}
+							alt={image.title}
+							fill
+							priority={index < 3}
+							loading={index >= 3 ? 'lazy' : 'eager'}
+							style={{
+								opacity:
+									isServiceSectionCarousel && hoveredIndex === index ? 0 : 1,
+							}}
+						/>
+						<Image
+							className={`absolute top-0 left-0 w-full h-full rounded-lg object-cover transition-opacity duration-700 ${
+								!isServiceSectionCarousel && 'grayscale'
+							}`}
+							src={image.secondary_image}
+							alt={image.title}
+							fill
+							priority={index < 3}
+							loading={index >= 3 ? 'lazy' : 'eager'}
+							style={{ opacity: hoveredIndex === index ? 1 : 0 }}
+						/>
+					</div>
 					{image.title && (
-						<div className="mt-2 w-[80%]">
-							<h1 className="font-semibold md:text-md">{image.title}</h1>
+						<div className="flex items-center justify-center mt-2 text-center px-4 h-[50px]">
+							<h1 className="font-semibold text-sm md:text-base">
+								{image.title}
+							</h1>
 						</div>
 					)}
 				</div>

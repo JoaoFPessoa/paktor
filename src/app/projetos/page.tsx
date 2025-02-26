@@ -31,9 +31,7 @@ export default function Projects() {
 	}, []);
 
 	return (
-		<div className="min-h-screen w-full flex flex-col items-center">
-			<Header />
-
+		<div className="min-h-screen w-full mt-24 flex flex-col items-center">
 			<main className="w-full max-w-[80%] px-4 mt-24 lg:mt-20">
 				<h1 className="text-center text-4xl font-bold mb-12">
 					Nossos projetos

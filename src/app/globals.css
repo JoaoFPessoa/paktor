@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 body {
-	background: #edeade;
 	width: 100vw;
 	height: 100vh;
 	overflow-x: hidden;
@@ -20,7 +19,7 @@ body {
 }
 
 .carousel-item {
-	padding: 0 10px; /* Add padding to the container */
+	padding: 0 10px; /* Maintain padding */
 }
 
 @keyframes scroll {

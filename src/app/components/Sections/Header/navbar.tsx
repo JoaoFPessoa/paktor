@@ -1,9 +1,13 @@
 import { useState } from 'react';
-import Button from '../../button';
+import { Button } from '../../button';
 import QuoteButton from '../../quoteButton';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-export default function Navbar() {
+export default function Navbar({ isSticky }: { isSticky: boolean }) {
 	const [showMenu, setShowMenu] = useState(false);
+	const pathname = usePathname();
+	const textColor = pathname !== '/' ? 'text-black' : 'text-white';
 
 	const toggleMenu = () => {
 		setShowMenu(!showMenu);
@@ -45,13 +49,13 @@ export default function Navbar() {
 				>
 					<div
 						onClick={toggleMenu}
-						className=" flex flex-col text-center p-2 gap-1 "
+						className={` flex flex-col text-center p-2 gap-1 `}
 					>
-						<Button href="/">Início</Button>
-						<Button href="/sobre">Sobre</Button>
-						<Button href="/#services">Serviços</Button>
-						<Button href="/projetos">Projetos</Button>
-						<Button href="/contato">Contato</Button>
+						<Link href="/">Início</Link>
+						<Link href="/sobre">Sobre</Link>
+						<Link href="/#services">Serviços</Link>
+						<Link href="/projetos">Projetos</Link>
+						<Link href="/contato">Contato</Link>
 						<QuoteButton />
 					</div>
 				</div>
@@ -61,12 +65,26 @@ export default function Navbar() {
 
 	const DesktopMenu = () => {
 		return (
-			<div className="md:flex hidden gap-4 justify-between  items-center font-semibold">
-				<Button href="/">Início</Button>
-				<Button href="/sobre">Sobre</Button>
-				<Button href="/#services">Serviços</Button>
-				<Button href="/projetos">Projetos</Button>
-				<Button href="/contato">Contato</Button>
+			<div
+				className={`md:flex hidden gap-4 justify-between  items-center font-semibold ${
+					isSticky ? 'text-white' : textColor
+				}`}
+			>
+				<Link className=" hover:scale-105" href="/">
+					Início
+				</Link>
+				<Link className=" hover:scale-105" href="/sobre">
+					Sobre
+				</Link>
+				<Link className=" hover:scale-105" href="/#services">
+					Serviços
+				</Link>
+				<Link className=" hover:scale-105" href="/projetos">
+					Projetos
+				</Link>
+				<Link className=" hover:scale-105" href="/contato">
+					Contato
+				</Link>
 				<QuoteButton />
 			</div>
 		);

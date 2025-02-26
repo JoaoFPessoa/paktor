@@ -4,6 +4,7 @@ import Footer from './components/Sections/Footer';
 import Head from 'next/head';
 import { WhatsAppButton } from './components/Whatsappbutton';
 import { Montserrat } from '@next/font/google';
+import Header from './components/Sections/Header/header';
 
 const montserrat = Montserrat({
 	subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({
 			</Head>
 			<body className={montserrat.className}>
 				<>
+					<Header />
 					{children}
 					<WhatsAppButton />
 					<Footer />

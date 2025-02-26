@@ -57,9 +57,10 @@ const ContactPage = () => {
 
 	return (
 		<div className={montserrat.className}>
-			<Header />
 			<Toaster position="top-right" />
-			<h1 className="text-4xl font-bold mb-12 text-center pt-12">Contatos</h1>
+			<h1 className="text-4xl font-bold mb-12 mt-24 text-center pt-12">
+				Contatos
+			</h1>
 
 			<div className="max-w-6xl mx-auto">
 				<div className="grid md:grid-cols-2 gap-12 mb-12">

@@ -4,11 +4,10 @@ export default function WhyChooseUsSection() {
 	return (
 		<div className="max-w-7xl w-full">
 			<h1 className="font-bold text-2xl md:text-3xl  tracking-tighter md:mt-4">
-				Por que nos escolher?
+				Por que escolher a Paktor Engenharia?
 			</h1>
-			<div className="flex w-full flex-wrap md:flex-nowrap  mt-3 md:mt-10  gap-4">
-				<Card title={'Experiência'} description="10+ anos" />
-				<Card title={'Qualidade'} description="">
+			<div className="flex w-full  flex-wrap md:flex-nowrap   mt-3 md:mt-10  gap-4">
+				<Card title={'Cumprimento de Prazos e Agilidade'} description="">
 					<div
 						style={{
 							display: 'flex',
@@ -17,14 +16,16 @@ export default function WhyChooseUsSection() {
 							marginLeft: '4px',
 						}}
 					>
-						<ul>
-							<li>- Cumprimento de Prazos</li>
-							<li> - Gerenciamento de Materiais e Fornecedores</li>
-							<li> - Controle de Qualidade Rigoroso</li>
-						</ul>
+						<p>
+							Executamos obras dentro dos prazos estabelecidos, garantindo a
+							qualidade e gerando economia para os nossos clientes.
+						</p>
 					</div>
-				</Card>
-				<Card title={'Serviços'} description="">
+				</Card>{' '}
+				<Card
+					title={'Gerenciamento de Materiais e Fornecedores'}
+					description=""
+				>
 					<div
 						style={{
 							display: 'flex',
@@ -33,14 +34,27 @@ export default function WhyChooseUsSection() {
 							marginLeft: '4px',
 						}}
 					>
-						<ul>
-							<li>- Projetos e estudos iniciais</li>
-							<li> - Planejamento e gestão da obra</li>
-							<li> - Reforma de casas e apartamentos</li>
-							<li>- Construção desde a fundação até a entrega das chaves</li>
-						</ul>
+						<p>
+							Trabalhamos com fornecedores de confiança e materiais de alta
+							qualidade, garantindo o melhor resultado em cada projeto.
+						</p>
 					</div>
-				</Card>
+				</Card>{' '}
+				<Card title={'Controle de Qualidade Rigoroso'} description="">
+					<div
+						style={{
+							display: 'flex',
+							gap: '8px',
+							marginTop: '8px',
+							marginLeft: '4px',
+						}}
+					>
+						<p>
+							Cada etapa da obra é monitorada para garantir que os mais altos
+							padrões sejam seguidos, assegurando a total satisfação do cliente.
+						</p>
+					</div>
+				</Card>{' '}
 			</div>
 		</div>
 	);

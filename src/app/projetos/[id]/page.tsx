@@ -78,7 +78,7 @@ const ProjectDetails = () => {
 						</p>
 					</div>
 
-					<div className="w-full lg:w-[50%] h-[90%] relative">
+					<div className="w-full lg:w-[50%] h-auto aspect-[16/9] relative">
 						{loading ? (
 							<LoadingSkeleton />
 						) : (
