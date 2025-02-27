@@ -9,11 +9,7 @@ interface ImageCarouselProps {
 	isServiceSectionCarousel?: boolean;
 }
 
-export default function CarouselClientPage({
-	autoPlay,
-	definedProjects,
-	isServiceSectionCarousel,
-}: ImageCarouselProps) {
+export default function CarouselClientPage({}: ImageCarouselProps) {
 	const [projects, setProjects] = useState<Project[]>([]);
 
 	async function handleGetProjects() {
@@ -24,15 +20,15 @@ export default function CarouselClientPage({
 	useEffect(() => {
 		handleGetProjects();
 	}, []);
+	console.log({ projects });
 
 	return (
 		<div>
-			{' '}
+			{/* {' '}
 			<ImageCarousel
-				isServiceSectionCarousel={isServiceSectionCarousel}
-				project={definedProjects ? definedProjects : projects}
+				project={projects}
 				autoPlay={autoPlay}
-			/>{' '}
+			/>{' '} */}
 		</div>
 	);
 }

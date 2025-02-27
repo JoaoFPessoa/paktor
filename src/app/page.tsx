@@ -64,14 +64,14 @@ export default function Home() {
 					>
 						<OurDifferencesSection />
 					</motion.div>
-					<motion.div
+					{/* <motion.div
 						variants={childVariants}
 						initial="hidden"
 						whileInView="visible"
 						viewport={{ once: true, amount: 0.4 }}
 					>
 						<OurPartners />
-					</motion.div>
+					</motion.div> */}
 					{/* <motion.div
 						variants={childVariants}
 						initial="hidden"

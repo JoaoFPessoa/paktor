@@ -48,3 +48,11 @@ body {
 	@apply flex; /* Ensure the item is a flex container */
 	flex-direction: column; /* Align items vertically */
 }
+
+.swiper-button-next {
+	color: #38e078 !important;
+}
+
+.swiper-button-prev {
+	color: #38e078 !important;
+}

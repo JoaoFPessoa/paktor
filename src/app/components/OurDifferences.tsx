@@ -2,8 +2,8 @@ import Card from './Sections/WhyChooseUs/Card';
 
 export default function OurDifferencesSection() {
 	return (
-		<div className="max-w-7xl">
-			<h1 className="font-bold text-2xl  md:text-3xl tracking-tighter md:mt-4">
+		<div className="p-4 pl-8 max-w-7xl w-full">
+			<h1 className="font-bold text-xl md:text-3xl  tracking-tighter md:mt-4">
 				Nossos diferenciais
 			</h1>
 			<div className="flex w-full flex-wrap md:flex-nowrap  mt-3 md:mt-10  gap-4">
