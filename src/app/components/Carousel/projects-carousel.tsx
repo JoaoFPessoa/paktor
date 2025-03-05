@@ -22,7 +22,6 @@ export default function ProjectsCarousel() {
 	const router = useRouter();
 
 	useEffect(() => {
-		// Fetch data from the API (replace with your actual API URL)
 		fetch('/api/projects')
 			.then((response) => response.json())
 			.then((data) => setProjects(data.data));
@@ -31,7 +30,6 @@ export default function ProjectsCarousel() {
 	const handleRedirect = (id: number) => {
 		router.push(`/projetos/${id}`);
 	};
-	console.log(projects);
 
 	return (
 		<div className="w-full max-w-4xl md:max-w-7xl mx-auto py-8 px-4 md:py-12 md:px-8">
@@ -71,7 +69,7 @@ export default function ProjectsCarousel() {
 								className="rounded-lg shadow-md md:shadow-lg absolute top-0 left-0 opacity-0 group-hover:opacity-100 group-hover:grayscale transition-opacity duration-300"
 							/>
 						</div>
-						<p className="mt-3 text-center font-semibold text-sm md:text-lg">
+						<p className="my-3 text-center font-semibold text-sm md:text-lg">
 							{item.title}
 						</p>
 					</SwiperSlide>

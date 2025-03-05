@@ -67,7 +67,7 @@ export default function Navbar({ isSticky }: { isSticky: boolean }) {
 		return (
 			<div
 				className={`md:flex hidden gap-4 justify-between  items-center font-semibold ${
-					isSticky ? 'text-white' : textColor
+					isSticky ? '' : textColor
 				}`}
 			>
 				<Link className=" hover:scale-105" href="/">

@@ -48,7 +48,7 @@ const AboutPage = () => {
 							<div className="h-1 w-24 bg-buttonGreen rounded"></div>
 						</div>
 
-						<div className="space-y-6 text-gray-600">
+						<div className="space-y-6 text-gray-700 font-semibold">
 							<motion.p
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
@@ -110,9 +110,9 @@ const AboutPage = () => {
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6 }}
-							className={`flex flex-col ${
+							className={`flex flex-col font-semibold ${
 								index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-							} gap-12 items-stretch h-[500px]`}
+							} gap-12 items-stretch h-[350px]`}
 						>
 							<div className="w-full md:w-1/2 relative rounded-2xl overflow-hidden">
 								<Image
@@ -144,7 +144,7 @@ const AboutPage = () => {
 														whileInView={{ opacity: 1, x: 0 }}
 														viewport={{ once: true }}
 														transition={{ delay: 0.2 * i }}
-														className="flex items-center text-gray-600 text-lg"
+														className="flex items-center text-gray-600 text-lg font-semibold"
 													>
 														<ChevronRight className="w-5 h-5 text-buttonGreen mr-2 flex-shrink-0" />
 														{val}

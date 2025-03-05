@@ -84,7 +84,7 @@ export default function ImageCarousel() {
 				slidesPerView={1}
 				navigation
 				pagination={{ clickable: true }}
-				autoplay={{ delay: 3000, disableOnInteraction: false }}
+				autoplay={{ delay: 4000, disableOnInteraction: false }}
 				breakpoints={{
 					480: { slidesPerView: 1 },
 					768: { slidesPerView: 2 },
@@ -97,7 +97,7 @@ export default function ImageCarousel() {
 						key={index}
 						className="flex flex-col items-center p-4 md:p-6"
 					>
-						<div className="w-11/12 h-48 md:h-60 relative">
+						<div className="w-11/12 h-48 md:h-60 relative group">
 							<Image
 								src={item.main_image}
 								alt={item.title}
@@ -105,8 +105,15 @@ export default function ImageCarousel() {
 								objectFit="cover"
 								className="rounded-lg shadow-md md:shadow-lg"
 							/>
+							<Image
+								src={item.secondary_image}
+								alt={`${item.title} - Before`}
+								layout="fill"
+								objectFit="cover"
+								className="rounded-lg shadow-md md:shadow-lg absolute top-0 left-0 opacity-0 group-hover:opacity-100 group-hover:grayscale transition-opacity duration-300"
+							/>
 						</div>
-						<p className="mt-3 text-center font-semibold text-sm md:text-lg">
+						<p className="my-3 text-center font-semibold text-sm md:text-lg">
 							{item.title}
 						</p>
 					</SwiperSlide>

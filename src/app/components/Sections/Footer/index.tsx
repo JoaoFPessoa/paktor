@@ -18,14 +18,14 @@ const Footer = () => {
 		<div className="w-full bg-black opacity-80 border-t mt-20">
 			<div className="w-full mx-auto p-4 max-w-7xl">
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-					<div className="flex flex-col justify-between items-center md:items-start">
-						<div className="text-center md:text-left">
+					<div className="flex flex-col justify-center  items-center md:items-start">
+						<div className="text-center flex flex-col items-center md:items-start md:text-left">
 							<Image
-								src="/logo-verde-branco.png"
+								src="/footer-logo.png"
 								alt="logo"
 								width={300}
 								height={300}
-								className="w-48 h-auto md:w-64"
+								className="w-48 h-auto "
 							/>
 							<p className="text-white mt-4 text-sm md:text-base">
 								A obra do seu jeito, com a qualidade que você merece.
@@ -41,8 +41,13 @@ const Footer = () => {
 									<Instagram className="h-8 w-8 md:h-10 md:w-10 text-white cursor-pointer" />
 									@paktor.engenharia
 								</a>
-								<a target="_blank" href="https://wa.me/5511999001074">
+								<a
+									target="_blank"
+									href="https://wa.me/5511999001074"
+									className="flex items-center gap-2 text-sm text-white justify-center flex-col"
+								>
 									<BsWhatsapp className="h-8 w-8 md:h-10 md:w-10 text-white cursor-pointer" />
+									Tel/Whats: (11) 99900-1074
 								</a>
 							</div>
 						</div>
@@ -62,7 +67,7 @@ const Footer = () => {
 					</div>
 				</div>
 
-				<div className="border-t mt-12 pt-8">
+				<div className=" border-t mt-12 pt-8">
 					<p className="text-center text-white text-sm md:text-base">
 						© 2025 Paktor. All rights reserved.
 					</p>

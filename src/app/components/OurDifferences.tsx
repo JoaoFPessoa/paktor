@@ -4,7 +4,7 @@ export default function OurDifferencesSection() {
 	return (
 		<div className="p-4 pl-8 max-w-7xl w-full">
 			<h1 className="font-bold text-xl md:text-3xl  tracking-tighter md:mt-4">
-				Nossos diferenciais
+				Cumprimento de Prazos e Agilidade
 			</h1>
 			<div className="flex w-full flex-wrap md:flex-nowrap  mt-3 md:mt-10  gap-4">
 				<Card title={'Agilidade e Eficiência'} description="">
@@ -16,12 +16,14 @@ export default function OurDifferencesSection() {
 							marginLeft: '4px',
 						}}
 					>
-						Somos reconhecidos por oferecer velocidade nos orçamentos e execução
-						rápida, garantindo que as obras sejam entregues com qualidade e no
-						menor tempo possível, gerando economia para nossos clientes.
+						Executamos obras dentro dos prazos estabelecidos, garantindo a
+						qualidade e gerando economia para os nossos clientes.
 					</div>
 				</Card>
-				<Card title={'Conhecimento e Experiência'} description="">
+				<Card
+					title={'Gerenciamento de Materiais e Fornecedores'}
+					description=""
+				>
 					<div
 						style={{
 							display: 'flex',
@@ -30,13 +32,11 @@ export default function OurDifferencesSection() {
 							marginLeft: '4px',
 						}}
 					>
-						Com profissionais que possuem mais de 30 anos de atuação no mercado,
-						já executamos projetos complexos e de grande porte em diversos
-						segmentos. Nossa expertise técnica nos permite oferecer soluções
-						inteligentes, sempre com foco na excelência.
+						Trabalhamos com fornecedores de confiança e materiais de alta
+						qualidade, garantindo o melhor resultado em cada projeto.
 					</div>
 				</Card>
-				<Card title={'Confiança e Transparência'} description="">
+				<Card title={'⦁	Controle de Qualidade Rigoroso'} description="">
 					<div
 						style={{
 							display: 'flex',
@@ -45,9 +45,8 @@ export default function OurDifferencesSection() {
 							marginLeft: '4px',
 						}}
 					>
-						Relações duradouras com clientes e fornecedores são o alicerce da
-						Modena Santos. Cumprimos rigorosamente os prazos e os contratos,
-						construindo vínculos de longo prazo.
+						Cada etapa da obra é monitorada para garantir que os mais altos
+						padrões sejam seguidos, assegurando a total satisfação do cliente.
 					</div>
 				</Card>
 			</div>

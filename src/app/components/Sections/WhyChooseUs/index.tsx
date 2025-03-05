@@ -7,7 +7,7 @@ export default function WhyChooseUsSection() {
 				Por que escolher a Paktor Engenharia?
 			</h1>
 			<div className="flex w-full  flex-wrap md:flex-nowrap   mt-3 md:mt-10  gap-4">
-				<Card title={'Cumprimento de Prazos e Agilidade'} description="">
+				<Card title={'Experiência'} description="">
 					<div
 						style={{
 							display: 'flex',
@@ -16,43 +16,38 @@ export default function WhyChooseUsSection() {
 							marginLeft: '4px',
 						}}
 					>
-						<p>
-							Executamos obras dentro dos prazos estabelecidos, garantindo a
-							qualidade e gerando economia para os nossos clientes.
-						</p>
+						<p>10+ anos</p>
 					</div>
 				</Card>{' '}
-				<Card
-					title={'Gerenciamento de Materiais e Fornecedores'}
-					description=""
-				>
+				<Card title={'Qualidade'} description="">
 					<div
 						style={{
 							display: 'flex',
+							flexDirection: 'column',
 							gap: '8px',
 							marginTop: '8px',
 							marginLeft: '4px',
 						}}
 					>
-						<p>
-							Trabalhamos com fornecedores de confiança e materiais de alta
-							qualidade, garantindo o melhor resultado em cada projeto.
-						</p>
+						<li>Cumprimento de Prazos</li>
+						<li>Gerenciamento de Materiais e Fornecedores</li>
+						<li>Controle de Qualidade Rigoroso</li>
 					</div>
 				</Card>{' '}
-				<Card title={'Controle de Qualidade Rigoroso'} description="">
+				<Card title={'Serviços'} description="">
 					<div
 						style={{
 							display: 'flex',
+							flexDirection: 'column',
 							gap: '8px',
 							marginTop: '8px',
 							marginLeft: '4px',
 						}}
 					>
-						<p>
-							Cada etapa da obra é monitorada para garantir que os mais altos
-							padrões sejam seguidos, assegurando a total satisfação do cliente.
-						</p>
+						<li> Projetos e estudos iniciais</li>
+						<li> Planejamento e gestão da obra</li>
+						<li> Reforma de casas e apartamentos</li>
+						<li> Construção desde a fundação até a entrega das chaves</li>
 					</div>
 				</Card>{' '}
 			</div>

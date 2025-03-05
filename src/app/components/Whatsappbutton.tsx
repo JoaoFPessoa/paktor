@@ -17,8 +17,8 @@ export const WhatsAppButton = () => {
 			<Image
 				alt="redirect-to-whatsapp"
 				src={'/whatsapp-icon.svg'}
-				width={42}
-				height={42}
+				width={62}
+				height={62}
 			/>
 		</a>
 	);
