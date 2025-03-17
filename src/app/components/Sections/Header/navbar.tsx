@@ -18,10 +18,7 @@ export default function Navbar({ isSticky }: { isSticky: boolean }) {
 			<div className="md:hidden  absolute left-2">
 				{/* Burger Icon */}
 				<div className="block">
-					<button
-						onClick={toggleMenu}
-						className="text-white focus:outline-none"
-					>
+					<button onClick={toggleMenu} className={'text-buttonGreen'}>
 						<svg
 							className="w-6 h-6"
 							fill="none"
